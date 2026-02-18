@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Algorithm Tasks</title>
+</head>
+<body>
+
+<h2>Open Console (F12) to See Results</h2>
+
+<script>
+
+// 1
+function getUserInitials(user) {
+  return user.firstName[0] + user.lastName[0];
+}
+
+// 2
+function countProperties(obj) {
+  return Object.keys(obj).length;
+}
+
+// 3
+function invertObject(obj) {
+  const result = {};
+  for (let key in obj) {
+    result[obj[key]] = key;
+  }
+  return result;
+}
+
+// 4
+function removeFalsyValues(arr) {
+  return arr.filter(Boolean);
+}
+
+// 5
+function groupByAge(people) {
+  return people.reduce((acc, person) => {
+    if (!acc[person.age]) acc[person.age] = [];
+    acc[person.age].push(person);
+    return acc;
+  }, {});
+}
+
+// 6
+function findMostFrequentElement(arr) {
+  const map = {};
+  let max = 0, result;
+  for (let num of arr) {
+    map[num] = (map[num] || 0) + 1;
+    if (map[num] > max) {
+      max = map[num];
+      result = num;
+    }
+  }
+  return result;
+}
+
+// 7
+function flatten(arr) {
+  return arr.flat(Infinity);
+}
+
+// 8
+function mergeObjects(...objs) {
+  return objs.reduce((acc, obj) => {
+    for (let key in obj) {
+      if (typeof obj[key] === "object" && obj[key] !== null && !Array.isArray(obj[key])) {
+        acc[key] = mergeObjects(acc[key] || {}, obj[key]);
+      } else {
+        acc[key] = obj[key];
+      }
+    }
+    return acc;
+  }, {});
+}
+
+// 9
+function rotateArray(arr, k) {
+  k %= arr.length;
+  return [...arr.slice(-k), ...arr.slice(0, -k)];
+}
+
+// 10
+function intersection(a, b) {
+  return [...new Set(a.filter(x => b.includes(x)))];
+}
+
+// 11
+function groupAnagrams(words) {
+  const map = {};
+  for (let word of words) {
+    const key = word.split("").sort().join("");
+    if (!map[key]) map[key] = [];
+    map[key].push(word);
+  }
+  return Object.values(map);
+}
+
+// 12
+function moveZerosToEnd(arr) {
+  let index = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== 0) {
+      [arr[index], arr[i]] = [arr[i], arr[index]];
+      index++;
+    }
+  }
+  return arr;
+}
+
+// 13
+function longestConsecutiveSequence(nums) {
+  const set = new Set(nums);
+  let max = 0;
+
+  for (let num of set) {
+    if (!set.has(num - 1)) {
+      let current = num;
+      let length = 1;
+      while (set.has(current + 1)) {
+        current++;
+        length++;
+      }
+      max = Math.max(max, length);
+    }
+  }
+  return max;
+}
+
+// 14
+function productExceptSelf(nums) {
+  const result = Array(nums.length).fill(1);
+  let left = 1;
+  for (let i = 0; i < nums.length; i++) {
+    result[i] = left;
+    left *= nums[i];
+  }
+  let right = 1;
+  for (let i = nums.length - 1; i >= 0; i--) {
+    result[i] *= right;
+    right *= nums[i];
+  }
+  return result;
+}
+
+// 15
+function deepEqual(a, b) {
+  if (a === b) return true;
+  if (typeof a !== "object" || typeof b !== "object" || a == null || b == null)
+    return false;
+
+  const keysA = Object.keys(a);
+  const keysB = Object.keys(b);
+
+  if (keysA.length !== keysB.length) return false;
+
+  for (let key of keysA) {
+    if (!deepEqual(a[key], b[key])) return false;
+  }
+
+  return true;
+}
+
+// 16
+function serializeObject(obj) {
+  return JSON.stringify(obj);
+}
+
+function deserializeObject(str) {
+  return JSON.parse(str);
+}
+
+console.log("All algorithm functions loaded!");
+
+</script>
+</body>
+</html>

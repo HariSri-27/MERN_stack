@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Tasks</title>
+  <style>
+    .highlight { background: yellow; }
+    .dark-mode { background: #222; color: white; }
+    .red-border { border: 2px solid red; }
+    .swatch { width: 40px; height: 40px; display: inline-block; cursor: pointer; margin: 5px; }
+    .modal-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: flex; justify-content: center; align-items: center;
+    }
+    .modal { background: white; padding: 20px; }
+  </style>
+</head>
+<body>
+
+<h1 id="header-title">Old Title</h1>
+
+<div class="product-card">Product 1</div>
+<div class="product-card">Product 2</div>
+
+<ul class="menu">
+  <li>Home</li>
+  <li>About</li>
+</ul>
+
+<div id="controls"></div>
+<div id="cart"></div>
+
+<img class="avatar" src="https://via.placeholder.com/100">
+
+<div class="article-body">
+  <p>Direct 1</p>
+  <p>Direct 2</p>
+  <div><p>Nested</p></div>
+</div>
+
+<button id="theme-toggle">Toggle Dark Mode</button>
+
+<div class="card">
+  <button data-action="delete">Delete Card</button>
+</div>
+
+<hr>
+
+<input id="todo-input">
+<button id="add-todo">Add</button>
+<ul id="todo-list"></ul>
+
+<hr>
+
+<ul id="users-list">
+  <li data-user-id="123">John</li>
+  <li data-user-id="456">Jane</li>
+</ul>
+
+<hr>
+
+<span id="count">0</span>
+<button id="inc">+1</button>
+<button id="dec">-1</button>
+
+<hr>
+
+<input id="search">
+<ul>
+  <li class="country">USA</li>
+  <li class="country">India</li>
+  <li class="country">Canada</li>
+</ul>
+
+<hr>
+
+<div class="swatch" data-color="#e74c3c" style="background:#e74c3c"></div>
+<div class="swatch" data-color="#3498db" style="background:#3498db"></div>
+<div class="swatch" data-color="#2ecc71" style="background:#2ecc71"></div>
+
+<hr>
+
+<ul id="sortable">
+  <li draggable="true">Item 1</li>
+  <li draggable="true">Item 2</li>
+  <li draggable="true">Item 3</li>
+</ul>
+
+<hr>
+
+<button id="open-modal
