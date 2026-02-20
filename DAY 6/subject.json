@@ -1,0 +1,17 @@
+{
+  "student_name": "John Doe",
+  "grade": "10",
+  "academic_year": "2025-2026",
+  "subjects": [
+    {
+      "id": 1,
+      "subject_name": "Mathematics",
+      "notes": "Real Numbers, Polynomials, Linear Equations"
+    },
+    {
+      "id": 2,
+      "subject_name": "Science",
+      "notes": "Chemical Reactions, Acids and Bases"
+    }
+  ]
+}
