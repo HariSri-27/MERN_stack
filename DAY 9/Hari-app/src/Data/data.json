@@ -1,0 +1,62 @@
+{
+  "users": [
+    { "email": "admin@gmail.com", "password": "12345" }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "name": "Mathematics",
+      "topics": [
+        { "id": 101, "title": "Algebra", "description": "Equations and variables", "notes": "Algebra deals with symbols and equations.", "difficulty": "Medium" },
+        { "id": 102, "title": "Trigonometry", "description": "Study of triangles", "notes": "Includes sine, cosine and tangent.", "difficulty": "Hard" },
+        { "id": 103, "title": "Calculus", "description": "Derivatives and integrals", "notes": "Calculus studies change and motion.", "difficulty": "Hard" },
+        { "id": 104, "title": "Statistics", "description": "Data analysis", "notes": "Mean, median and probability.", "difficulty": "Easy" },
+        { "id": 105, "title": "Geometry", "description": "Shapes and angles", "notes": "Study of lines, circles and polygons.", "difficulty": "Medium" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Science",
+      "topics": [
+        { "id": 201, "title": "Physics", "description": "Motion and force", "notes": "Newton’s laws of motion.", "difficulty": "Medium" },
+        { "id": 202, "title": "Chemistry", "description": "Elements and reactions", "notes": "Periodic table and chemical bonds.", "difficulty": "Medium" },
+        { "id": 203, "title": "Biology", "description": "Life science", "notes": "Cells, organs and ecosystems.", "difficulty": "Easy" },
+        { "id": 204, "title": "Astronomy", "description": "Study of space", "notes": "Planets, stars and galaxies.", "difficulty": "Easy" },
+        { "id": 205, "title": "Environmental Science", "description": "Nature and environment", "notes": "Climate change and sustainability.", "difficulty": "Medium" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "English",
+      "topics": [
+        { "id": 301, "title": "Grammar", "description": "Rules of language", "notes": "Tenses, nouns and verbs.", "difficulty": "Easy" },
+        { "id": 302, "title": "Vocabulary", "description": "Word meanings", "notes": "Synonyms and antonyms.", "difficulty": "Easy" },
+        { "id": 303, "title": "Essay Writing", "description": "Structured writing", "notes": "Introduction, body and conclusion.", "difficulty": "Medium" },
+        { "id": 304, "title": "Comprehension", "description": "Reading skills", "notes": "Understanding passages.", "difficulty": "Medium" },
+        { "id": 305, "title": "Poetry", "description": "Literary form", "notes": "Rhymes and metaphors.", "difficulty": "Medium" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Computer Science",
+      "topics": [
+        { "id": 401, "title": "Programming Basics", "description": "Introduction to coding", "notes": "Variables, loops and conditions.", "difficulty": "Easy" },
+        { "id": 402, "title": "Data Structures", "description": "Organizing data", "notes": "Arrays, stacks and queues.", "difficulty": "Hard" },
+        { "id": 403, "title": "Algorithms", "description": "Problem solving steps", "notes": "Sorting and searching.", "difficulty": "Hard" },
+        { "id": 404, "title": "Databases", "description": "Data storage", "notes": "SQL and queries.", "difficulty": "Medium" },
+        { "id": 405, "title": "Web Development", "description": "Building websites", "notes": "HTML, CSS and JavaScript.", "difficulty": "Medium" }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "History",
+      "topics": [
+        { "id": 501, "title": "Ancient History", "description": "Early civilizations", "notes": "Egypt, Indus Valley, Rome.", "difficulty": "Easy" },
+        { "id": 502, "title": "Medieval History", "description": "Middle ages", "notes": "Kings and kingdoms.", "difficulty": "Medium" },
+        { "id": 503, "title": "Modern History", "description": "Recent centuries", "notes": "Industrial revolution.", "difficulty": "Medium" },
+        { "id": 504, "title": "World Wars", "description": "Global conflicts", "notes": "WW1 and WW2.", "difficulty": "Hard" },
+        { "id": 505, "title": "Indian History", "description": "India’s past", "notes": "Freedom struggle.", "difficulty": "Medium" }
+      ]
+    }
+  ]
+}
