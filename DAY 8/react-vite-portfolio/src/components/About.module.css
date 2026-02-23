@@ -1,0 +1,14 @@
+.aboutSection {
+  padding: 40px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.content ul {
+  list-style: none;
+  padding: 0;
+}
