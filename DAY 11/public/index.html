@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Subjects</title>
+</head>
+<body>
+
+  <h1>Subjects List</h1>
+  <div id="subjects"></div>
+
+  <script>
+    fetch('/subjects')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('subjects');
+
+        data.forEach(subject => {
+          const div = document.createElement('div');
+          div.innerHTML = `
+            <h2>${subject.name}</h2>
+            <ul>
+              ${subject.topics.map(topic => `
+                <li>
+                  <strong>${topic.title}</strong> - ${topic.description}
+                </li>
+              `).join('')}
+            </ul>
+          `;
+          container.appendChild(div);
+        });
+      });
+  </script>
+
+</body>
+</html>
